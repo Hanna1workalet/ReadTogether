@@ -3,9 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read Togather profile page</title>
+    <title>ReadTogether Profile page</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <a      href="#home" class="logo-btn">ReadTogether</a>
+            <span class="r-mark"></span>
+        </div>
+        <nav>
+            <a href="home.html" class="home">Home</a>
+            <a href="profile.html" class="profile">Profile</a>
+            <a href="#my-books" class="my-books">My Books</a>
+        </nav>
+        <div>
+            <input type="text" placeholder="search books">
+            <button class="avatar"></button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="personal-profile">
+                <div class="avatar"> </div>
+                <p class="section-name">READER PROFILE</p>
+                <h2>Ameha Assegid</h2>
+                <p>Reading slowly, thinking deeply.</p>
+                <p>Member since September 2024</p>
+            </div>
+            <button class="edit-btn">Edit profile</button>
+        </section>
+        <section class="stats">
+            <div class="stat-box">
+                <h3>12</h3>
+                <p>Books read</p>
+            </div>
+            <div class="stat-box">
+                <h3>3842</h3>
+                <p>Pages read</p>
+            </div>
+            <div class="stat-box">
+                <h3>38</h3>
+                <p>Notes shared</p>
+            </div>
+            <div class="stat-box">
+                <h3>147</h3>
+                <p>Likes</p>
+            </div>
+        </section>
+        <article class="current-read">
+            <p class="section-name">ON THE NIGHTSTAND</p>
+            <h2>Currently reading</h2>
+            <div class="mini-current-read">
+                <div class="book-cover mini"></div>
+                <div class="about-the-book mini">
+                    <p class="genre">CONTEMPORARY FICTION</p>
+                    <h3 class="title">The Midnight Library</h3>
+                    <p class="author">Matt Haig</p>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                        <p class="page-count">Page 188 of 304 . 62%</p>
+                    </div>
+                    <button class="continue-btn">Continue -></button>
+                </div>
+            </div>
+        </article>
+        <article class="recently-finished">
+            <p class="section-name">RECENTLY FINISHED</p>
+            <h2>Books that stayed with you</h2>
+            <div class="book-card">
+                <div class="book-cover"></div>
+                <h3 class="title">Artemis</h3>
+                <p>Finished 2 weeks ago</p>
+                <p class="rating">4.5</p>
+            </div>
+            <div class="book-card">
+                <div class="book-cover"></div>
+                <h3 class="title">Project Hail Mary</h3>
+                <p>Finished last month</p>
+                <p class="rating">5.0</p>
+            </div>
+        </article>
+        <article class="recent-activity">
+            <p class="section-name">RECENT ACTIVITY</p>
+            <h2>Your reading trail</h2>
+            <div class="bullet-point">
+                <div class="icon"></div>
+                <p>Left a note on page 189</p>
+                <p>The Midnight Library · 8 min ago</p>
+            </div>
+            <div class="bullet-point">
+                <div class="icon"></div>
+                <p>Finished chapter 17</p>
+                <p>The Midnight Library · Yesterday</p>
+            </div>
+            <div class="bullet-point">
+                <div class="icon"></div>
+                <p>Appreciated nana’s note</p>
+                <p>The Midnight Library · Yesterday</p>
+            </div>
+            <div class="bullet-point">
+                <div class="icon"></div>
+                <p>Added a book to your shelf</p>
+                <p>Project Hail Mary · 4 days ago</p>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
