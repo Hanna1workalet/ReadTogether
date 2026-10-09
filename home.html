@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadTogether home page</title>
+    <title>Home · ReadTogether</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="logo">
-            <a      href="#home" class="logo-btn">ReadTogether</a>
-            <span class="r-mark"></span>
+            <a href="home.html" class="logo-btn">ReadTogether</a>
+            <span class="r-mark" aria-hidden="true"></span>
         </div>
-        <nav>
-            <a href="#home" class="home">Home</a>
-            <a href="#profile" class="profile">Profile</a>
-            <a href="#my-books">My Books</a>
+        <nav aria-label="Main">
+            <a href="home.html" class="home" aria-current="page">Home</a>
+            <a href="profile.html" class="profile">Profile</a>
+            <a href="home.html#my-books">My Books</a>
         </nav>
-        <div>
-            <input type="text" placeholder="search books">
-            <button class="avatar"></button>
+        <div class="header-actions">
+            <input type="search" aria-label="Search books" placeholder="Search books">
+            <a href="profile.html" class="avatar" aria-label="Profile"></a>
         </div>
     </header>
-    <main>
-        <section class="hero">
+    <main id="main">
+        <section class="hero" id="home">
             <div class="welcome">
                 <p class="section-name">YOUR READING ROOM</p>
                 <h1>Read here, with others.</h1>
@@ -36,29 +38,29 @@
         </section>
         <article class="current-read">
             <div class="book-cover-outer">
-                <div class="book-cover-inner"> </div>
+                <div class="book-cover-inner"></div>
             </div>
             <div class="about-the-book">
-                <p class="status">CURENTLY READING</p>
+                <p class="status">CURRENTLY READING</p>
                 <h2 class="title">The Midnight Library</h2>
                 <p class="author">Matt Haig</p>
                 <p class="description">Between life and death there is a library. When Nora Seed finds herself there, she has a chance to try the lives she might have lived.</p>
                 <div class="progress">
                     <p class="page-count">Page 188 of 304</p>
                     <p class="percent-progress">62%</p>
-                    <div class="progress-bar"></div>
+                    <progress class="progress-bar" max="100" value="62">62%</progress>
                 </div>
                 <div class="actions">
-                    <button class="continue-reading">Continue reading -></button>
-                    <button class="book-details">View book details</button>
+                    <a class="continue-reading" href="reading.html">Continue reading</a>
+                    <a class="book-details" href="book.html">View book details</a>
                 </div>
                 <p>18 readers are discussing your current chapter</p>
             </div>
         </article>
-        <article class="my-books">
-            <p>MY BOOKS</p>
+        <article class="my-books" id="my-books">
+            <p class="section-name">MY BOOKS</p>
             <h2>Your reading shelf</h2>
-            <p>View all books -></p>
+            <a href="home.html#my-books">View all books</a>
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
@@ -66,7 +68,7 @@
                     <h3 class="title">The Midnight Library</h3>
                     <p class="author">Matt Haig</p>
                     <div class="progress">
-                        <div class="progress-bar"></div>
+                        <progress class="progress-bar" max="100" value="62">62%</progress>
                         <p class="percent-progress">62%</p>
                     </div>
                 </div>
@@ -74,59 +76,44 @@
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
-                    <div class="progress-bar">62%</div>
+                    <p class="genre">Science Fiction</p>
+                    <h3 class="title">Project Hail Mary</h3>
+                    <p class="author">Andy Weir</p>
+                    <div class="progress">
+                        <progress class="progress-bar" max="100" value="100">100%</progress>
+                        <p class="percent-progress">100%</p>
+                    </div>
                 </div>
             </div>
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
-                    <div class="progress-bar">62%</div>
+                    <p class="genre">Literary Fiction</p>
+                    <h3 class="title">White Nights</h3>
+                    <p class="author">Fyodor Dostoevsky</p>
+                    <div class="progress">
+                        <progress class="progress-bar" max="100" value="6">6%</progress>
+                        <p class="percent-progress">6%</p>
+                    </div>
                 </div>
             </div>
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
-                    <div class="progress-bar">62%</div>
+                    <p class="genre">Christianity</p>
+                    <h3 class="title">The Pursuit of God</h3>
+                    <p class="author">A.W. Tozer</p>
+                    <div class="progress">
+                        <progress class="progress-bar" max="100" value="10">10%</progress>
+                        <p class="percent-progress">10%</p>
+                    </div>
                 </div>
             </div>
         </article>
         <article class="community-reads">
-            <p>BOOKS YOUR COMMUNITY IS READING</p>
+            <p class="section-name">BOOKS YOUR COMMUNITY IS READING</p>
             <h2>Community reads</h2>
-            <a href="#books">View all books -></a>
-            <div class="book-card">
-                <div class="book-cover"></div>
-                <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
-                    <div class="readers">
-                        <p class="readres-count">1,284 readers</p>
-                        <p class="discussion-count">18 discussing Page 37</p>
-                    </div>
-                </div>
-            </div>
-            <div class="book-card">
-                <div class="book-cover"></div>
-                <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
-                    <div class="readers">
-                        <p class="readres-count">1,284 readers</p>
-                        <p class="discussion-count">18 discussing Page 37</p>
-                    </div>
-                </div>
-            </div>
+            <a href="book.html">View all books</a>
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
@@ -135,19 +122,43 @@
                     <p class="author">Matt Haig</p>
                     <div class="readers">
                         <p class="readers-count">1,284 readers</p>
-                        <p class="discussion-count">18 discussing Page 37</p>
+                        <p class="discussion-count">18 discussing page 189</p>
                     </div>
                 </div>
             </div>
             <div class="book-card">
                 <div class="book-cover"></div>
                 <div class="book-detail">
-                    <p class="genre">Contemporary Fiction</p>
-                    <h3 class="title">The Midnight Library</h3>
-                    <p class="author">Matt Haig</p>
+                    <p class="genre">Fantasy</p>
+                    <h3 class="title">Fourth Wing</h3>
+                    <p class="author">Rebecca Yarros</p>
                     <div class="readers">
-                        <p class="readeres-count">1,284 readers</p>
-                        <p class="discussion-count">18 discussing Page 37</p>
+                        <p class="readers-count">2,041 readers</p>
+                        <p class="discussion-count">31 discussing page 112</p>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover"></div>
+                <div class="book-detail">
+                    <p class="genre">Historical Fiction</p>
+                    <h3 class="title">The Seven Husbands of Evelyn Hugo</h3>
+                    <p class="author">Taylor Jenkins Reid</p>
+                    <div class="readers">
+                        <p class="readers-count">3,672 readers</p>
+                        <p class="discussion-count">54 discussing page 201</p>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover"></div>
+                <div class="book-detail">
+                    <p class="genre">Christianity</p>
+                    <h3 class="title">The Screwtape Letters</h3>
+                    <p class="author">C.S. Lewis</p>
+                    <div class="readers">
+                        <p class="readers-count">896 readers</p>
+                        <p class="discussion-count">12 discussing page 37</p>
                     </div>
                 </div>
             </div>

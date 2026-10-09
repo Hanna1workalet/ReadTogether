@@ -3,75 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadTogether reading page</title>
+    <title>Reading · The Midnight Library · ReadTogether</title>
+    <link rel="stylesheet" href="css/reading.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="logo">
-            <a      href="#home" class="logo-btn">ReadTogether</a>
-            <span class="r-mark"></span>
+            <a href="home.html" class="logo-btn">ReadTogether</a>
+            <span class="r-mark" aria-hidden="true"></span>
         </div>
-        <nav>
+        <nav aria-label="Main">
             <a href="home.html" class="home">Home</a>
             <a href="profile.html" class="profile">Profile</a>
-            <a href="#my-books" class="my-books">My Books</a>
+            <a href="home.html#my-books" class="my-books">My Books</a>
         </nav>
-        <div>
-            <input type="text" placeholder="search books">
-            <button class="avatar"></button>
+        <div class="header-actions">
+            <input type="search" aria-label="Search books" placeholder="Search books">
+            <a href="profile.html" class="avatar" aria-label="Profile"></a>
         </div>
     </header>
-    <main>
-        <section>
-            <a href="#books">Book details</a>
-            <p class="page-count">Page 189 of 304<p/>
-            <div class="progress-bar"></div>
+    <main id="main">
+        <section class="reader-status">
+            <a href="book.html">Book details</a>
+            <p class="page-count">Page 189 of 304</p>
+            <progress class="progress-bar" max="304" value="189">Page 189 of 304</progress>
         </section>
         <section>
             <p class="section-name">CHAPTER EIGHTEEN</p>
-            <h1 class="chapter-title">A Different life</h1>
+            <h1 class="chapter-title">A Different Life</h1>
         </section>
         <article class="content">
             <p>She had thought the purpose was to find the right life. As though somewhere, hidden among the shelves, there was a perfect version waiting to forgive every wrong turn.</p>
             <p>But there was no perfect life. There were only lives: complicated, surprising, unfinished. Each one asked something of her.</p>
             <p>She placed a hand against the nearest shelf and felt, for the first time, not the weight of everything she had missed, but the lightness of everything still ahead.</p>
         </article>
-        <section class="comments">
+        <section class="comments" id="comments">
             <p class="section-name">CONVERSATION</p>
             <h2>Notes on page 189</h2>
-            <p>These notes belong only to page 189</p>
-            <div class="comment-card">
-                <br>
-                <div class="avatar"></div>
-                <p class="name">Delina M.</p>
-                <p class="message">This line makes the whole chapter feel like a door opening.</p>
-                <div class="likes">12</div>
-                <time>8 minutes ago</time>
-            </div>
-            <div class="comment-card">
-                <br>
-                <div class="avatar"></div>
-                <p class="name">Gelila M.</p>
-                <p class="message">This line makes the whole chapter feel like a door opening.</p>
-                <div class="likes">12</div>
-                <time>8 minutes ago</time>
-            </div>
-            <div class="comment-card">
-                <br>
-                <div class="avatar"></div>
-                <p class="name">Sofia M.</p>
-                <p class="message">This line makes the whole chapter feel like a door opening.</p>
-                <div class="likes">12</div>
-                <time>8 minutes ago</time>
-            </div>
-            <input type="text" class="comment-box" placeholder="Leave a thought on page 189">
-            <button value="post"></button>
+            <p>These notes belong only to page 189.</p>
+            <ul class="comment-list">
+                <li class="comment-card">
+                    <div class="avatar" aria-hidden="true"></div>
+                    <p class="name">Delina M.</p>
+                    <p class="message">This line makes the whole chapter feel like a door opening.</p>
+                    <p class="likes">12 likes</p>
+                    <time datetime="2026-10-09T14:30">8 minutes ago</time>
+                </li>
+                <li class="comment-card">
+                    <div class="avatar" aria-hidden="true"></div>
+                    <p class="name">Gelila M.</p>
+                    <p class="message">The shelf metaphor lands harder on a second read.</p>
+                    <p class="likes">7 likes</p>
+                    <time datetime="2026-10-09T12:05">3 hours ago</time>
+                </li>
+                <li class="comment-card">
+                    <div class="avatar" aria-hidden="true"></div>
+                    <p class="name">Sofia M.</p>
+                    <p class="message">This is the page I wanted to underline in every life she tries.</p>
+                    <p class="likes">4 likes</p>
+                    <time datetime="2026-10-08T21:18">Yesterday</time>
+                </li>
+            </ul>
+            <form class="comment-form" action="#" method="post">
+                <label for="new-comment">Leave a thought on page 189</label>
+                <input id="new-comment" type="text" class="comment-box" name="comment" placeholder="Leave a thought on page 189">
+                <button type="submit">Post</button>
+            </form>
         </section>
         <footer>
             <p class="page-num">- 189 -</p>
-            <br>
-            <a class="previous">Previous page</a>
-            <a class="next">Next page</a>
+            <nav class="page-nav" aria-label="Page">
+                <a class="previous" href="reading.html">Previous page</a>
+                <a class="next" href="reading.html">Next page</a>
+            </nav>
         </footer>
     </main>
 </body>

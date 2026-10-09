@@ -3,50 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadTogether Profile page</title>
+    <title>Profile · ReadTogether</title>
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="logo">
-            <a      href="#home" class="logo-btn">ReadTogether</a>
-            <span class="r-mark"></span>
+            <a href="home.html" class="logo-btn">ReadTogether</a>
+            <span class="r-mark" aria-hidden="true"></span>
         </div>
-        <nav>
+        <nav aria-label="Main">
             <a href="home.html" class="home">Home</a>
-            <a href="profile.html" class="profile">Profile</a>
-            <a href="#my-books" class="my-books">My Books</a>
+            <a href="profile.html" class="profile" aria-current="page">Profile</a>
+            <a href="home.html#my-books" class="my-books">My Books</a>
         </nav>
-        <div>
-            <input type="text" placeholder="search books">
-            <button class="avatar"></button>
+        <div class="header-actions">
+            <input type="search" aria-label="Search books" placeholder="Search books">
+            <a href="profile.html" class="avatar" aria-label="Profile"></a>
         </div>
     </header>
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="personal-profile">
-                <div class="avatar"> </div>
+                <div class="avatar" aria-hidden="true"></div>
                 <p class="section-name">READER PROFILE</p>
-                <h2>Ameha Assegid</h2>
+                <h1>Ameha Assegid</h1>
                 <p>Reading slowly, thinking deeply.</p>
                 <p>Member since September 2024</p>
             </div>
-            <button class="edit-btn">Edit profile</button>
+            <button type="button" class="edit-btn">Edit profile</button>
         </section>
-        <section class="stats">
+        <section class="stats" aria-label="Reading stats">
             <div class="stat-box">
-                <h3>12</h3>
+                <h2>12</h2>
                 <p>Books read</p>
             </div>
             <div class="stat-box">
-                <h3>3842</h3>
+                <h2>3842</h2>
                 <p>Pages read</p>
             </div>
             <div class="stat-box">
-                <h3>38</h3>
+                <h2>38</h2>
                 <p>Notes shared</p>
             </div>
             <div class="stat-box">
-                <h3>147</h3>
+                <h2>147</h2>
                 <p>Likes</p>
             </div>
         </section>
@@ -60,10 +62,10 @@
                     <h3 class="title">The Midnight Library</h3>
                     <p class="author">Matt Haig</p>
                     <div class="progress">
-                        <div class="progress-bar"></div>
-                        <p class="page-count">Page 188 of 304 . 62%</p>
+                        <progress class="progress-bar" max="100" value="62">62%</progress>
+                        <p class="page-count">Page 189 of 304 · 62%</p>
                     </div>
-                    <button class="continue-btn">Continue -></button>
+                    <a class="continue-btn" href="reading.html">Continue reading</a>
                 </div>
             </div>
         </article>
@@ -86,26 +88,28 @@
         <article class="recent-activity">
             <p class="section-name">RECENT ACTIVITY</p>
             <h2>Your reading trail</h2>
-            <div class="bullet-point">
-                <div class="icon"></div>
-                <p>Left a note on page 189</p>
-                <p>The Midnight Library · 8 min ago</p>
-            </div>
-            <div class="bullet-point">
-                <div class="icon"></div>
-                <p>Finished chapter 17</p>
-                <p>The Midnight Library · Yesterday</p>
-            </div>
-            <div class="bullet-point">
-                <div class="icon"></div>
-                <p>Appreciated nana’s note</p>
-                <p>The Midnight Library · Yesterday</p>
-            </div>
-            <div class="bullet-point">
-                <div class="icon"></div>
-                <p>Added a book to your shelf</p>
-                <p>Project Hail Mary · 4 days ago</p>
-            </div>
+            <ol class="activity-list">
+                <li class="bullet-point">
+                    <div class="icon" aria-hidden="true"></div>
+                    <p>Left a note on page 189</p>
+                    <p>The Midnight Library · 8 min ago</p>
+                </li>
+                <li class="bullet-point">
+                    <div class="icon" aria-hidden="true"></div>
+                    <p>Finished chapter 17</p>
+                    <p>The Midnight Library · Yesterday</p>
+                </li>
+                <li class="bullet-point">
+                    <div class="icon" aria-hidden="true"></div>
+                    <p>Appreciated Nana’s note</p>
+                    <p>The Midnight Library · Yesterday</p>
+                </li>
+                <li class="bullet-point">
+                    <div class="icon" aria-hidden="true"></div>
+                    <p>Added a book to your shelf</p>
+                    <p>Project Hail Mary · 4 days ago</p>
+                </li>
+            </ol>
         </article>
     </main>
 </body>
