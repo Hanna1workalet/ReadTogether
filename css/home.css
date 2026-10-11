@@ -1,0 +1,114 @@
+@import url("base.css");
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.4fr 280px;
+    gap: 32px;
+    align-items: end;
+    margin-bottom: 36px;
+}
+
+.welcome h1 {
+    max-width: 12ch;
+    margin: 10px 0 14px;
+    font-size: clamp(2.8rem, 6vw, 4.6rem);
+}
+
+.welcome > p:last-child {
+    max-width: 42ch;
+    color: var(--ink-soft);
+    font-size: 1.08rem;
+}
+
+.weekly-report {
+    padding: 22px 24px 20px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.weekly-report p {
+    color: var(--charcole);
+    font-size: 0.9rem;
+}
+
+.weekly-report h3 {
+    margin: 8px 0 6px;
+    font-size: 2.4rem;
+}
+
+.current-read {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+    padding: 28px;
+    margin-bottom: 56px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.book-cover-outer {
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    background:
+        linear-gradient(180deg, #f1dbf3, #e5c2dc);
+    border-radius:6px;
+}
+
+.book-cover-inner {
+    width: 168px;
+}
+
+.about-the-book .title {
+    margin: 8px 0 6px;
+    font-size: 2.1rem;
+}
+
+.about-the-book .description {
+    max-width: 54ch;
+    margin: 12px 0 4px;
+    color: var(--ink-soft);
+}
+
+.about-the-book .progress {
+    max-width: 420px;
+    margin: 18px 0;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.about-the-book > p:last-child {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.my-books,
+.community-reads {
+    margin-bottom: 52px;
+}
+
+.readers {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 8px;
+}
+
+@media (max-width: 400px) {
+    .hero,
+    .current-read {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover-inner {
+        width: 140px;
+    }
+}
