@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Midnight Library · ReadTogether</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
@@ -24,7 +27,8 @@
         </div>
     </header>
     <main id="main">
-        <a href="home.html#my-books">Back to My Books</a>
+        <a class="back-link" href="home.html#my-books">Back to My Books</a>
+        <div class="book-hero">
         <div class="cover">
             <div class="book-cover"></div>
         </div>
@@ -47,16 +51,19 @@
                 <li class="genre">Magical realism</li>
             </ul>
         </article>
+        </div>
         <article class="progress">
             <p class="section-name">YOUR PROGRESS</p>
             <h2>62%</h2>
             <progress class="progress-bar" max="100" value="62">62%</progress>
             <p class="page-count">Page 189 <span>of 304</span></p>
-            <a href="reading.html">Continue reading</a>
-            <button type="button" aria-pressed="true">Saved to my Books</button>
+            <div class="progress-actions">
+                <a href="reading.html">Continue reading</a>
+                <button type="button" aria-pressed="true">Saved to my Books</button>
+            </div>
             <p>Last read yesterday</p>
         </article>
-        <article>
+        <article class="conversations">
             <p class="section-name">READING TOGETHER</p>
             <h2>Conversations in this book</h2>
             <p>Readers have left 642 thoughtful notes across 118 pages. You’ll see them alongside the page they belong to—never before you get there.</p>

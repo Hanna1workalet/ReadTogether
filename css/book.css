@@ -1,0 +1,164 @@
+@import url("base.css");
+
+.back-link {
+    display: inline-flex;
+    margin-bottom: 28px;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+}
+
+.back-link:hover {
+    color: var(--ink);
+}
+
+.book-hero {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 28px;
+}
+
+.cover {
+    padding: 28px;
+    background: linear-gradient(180deg, #f3eadb, #e5d7c2);
+    border-radius: 24px;
+}
+
+.cover .book-cover {
+    width: 100%;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent 10%),
+        linear-gradient(165deg, #1b2430, #355c6b 55%, #d4b483);
+}
+
+.details h1 {
+    margin: 8px 0 8px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+}
+
+.details > p {
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+}
+
+.book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 18px;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+}
+
+.book-meta li + li {
+    padding-left: 18px;
+    border-left: 1px solid var(--line);
+}
+
+.description {
+    display: grid;
+    gap: 12px;
+    max-width: 60ch;
+    color: var(--ink-soft);
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.genres .genre {
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    text-transform: none;
+    font-size: 0.82rem;
+}
+
+article.progress,
+.conversations {
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+article.progress h2 {
+    margin: 8px 0 14px;
+    font-size: 2.6rem;
+}
+
+article.progress .page-count {
+    margin: 10px 0 16px;
+}
+
+article.progress .page-count span {
+    color: #9a9186;
+}
+
+.progress-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.conversations h2 {
+    margin: 6px 0 10px;
+    font-size: 1.8rem;
+}
+
+.conversations > p {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+}
+
+.comment-card {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 4px 12px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--paper);
+}
+
+.comment-card .avatar {
+    grid-row: 1 / 4;
+}
+
+.comment-page {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
+
+.comment {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+}
+
+.commenter {
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+}
+
+@media (max-width: 800px) {
+    .book-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .cover {
+        max-width: 280px;
+    }
+}

@@ -1,0 +1,150 @@
+@import url("base.css");
+
+main {
+    width: min(760px, calc(100% - 48px));
+}
+
+.reader-status {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 16px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.reader-status a {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+}
+
+.reader-status .page-count {
+    justify-self: end;
+}
+
+.reader-status .progress-bar {
+    grid-column: 1 / -1;
+}
+
+.chapter-title {
+    margin: 8px 0 28px;
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+}
+
+.content {
+    display: grid;
+    gap: 22px;
+    margin-bottom: 48px;
+    font-family: var(--serif);
+    font-size: 1.28rem;
+    line-height: 1.7;
+}
+
+.comments {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.comments h2 {
+    margin: 6px 0 8px;
+    font-size: 1.8rem;
+}
+
+.comments > p {
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+}
+
+.comment-list {
+    display: grid;
+    gap: 12px;
+}
+
+.comment-card {
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    grid-template-areas:
+        "avatar name likes"
+        "avatar message message"
+        "avatar time time";
+    gap: 2px 12px;
+    padding: 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}
+
+.comment-card .avatar { grid-area: avatar; }
+.comment-card .name { grid-area: name; font-weight: 600; }
+.comment-card .message { grid-area: message; font-family: var(--serif); font-size: 1.08rem; }
+.comment-card .likes { grid-area: likes; color: var(--ink-soft); font-size: 0.84rem; }
+.comment-card time { grid-area: time; color: var(--ink-soft); font-size: 0.84rem; }
+
+.comment-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 10px;
+    margin-top: 16px;
+}
+
+.comment-form label {
+    grid-column: 1 / -1;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+}
+
+.comment-box {
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--card);
+    outline: none;
+}
+
+.comment-box:focus {
+    border-color: var(--ink);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.page-num {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--ink-soft);
+    letter-spacing: 0.18em;
+}
+
+.page-nav {
+    display: contents;
+}
+
+.previous {
+    justify-self: start;
+}
+
+.next {
+    justify-self: end;
+}
+
+@media (max-width: 560px) {
+    .comment-card,
+    .comment-form {
+        grid-template-columns: 42px 1fr;
+        grid-template-areas:
+            "avatar name"
+            "avatar likes"
+            "message message"
+            "time time";
+    }
+
+    .comment-form {
+        grid-template-columns: 1fr;
+    }
+}
