@@ -70,12 +70,14 @@ No build step or dependencies.
 2. Open `index.html` in a browser, or use the VS Code **Live Server** extension for auto-reload.
 3. Use the navigation to visit the other pages.
 
-The entry file must be named `index.html`.
+## Run
+Use this link to run the project
+https://hanna1workalet.github.io/ReadTogether/
 
 ## Roadmap
 
 - [x] Home, book, reading and profile pages
-- [ ] Shared styles consistent across all pages
+- [x] Shared styles consistent across all pages
 - [ ] JavaScript: page navigation, progress, search, note form
 - [ ] Backend and accounts (for example Supabase or Firebase) so notes persist
 - [ ] Real book content split into pages (start with public-domain books)
