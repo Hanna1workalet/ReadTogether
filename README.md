@@ -70,7 +70,9 @@ No build step or dependencies.
 2. Open `index.html` in a browser, or use the VS Code **Live Server** extension for auto-reload.
 3. Use the navigation to visit the other pages.
 
-The entry file must be named `index.html`.
+## Run
+Use this link to run the project
+https://hanna1workalet.github.io/ReadTogether/
 
 ## Roadmap
 
