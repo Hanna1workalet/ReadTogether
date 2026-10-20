@@ -13,7 +13,7 @@ main {
 }
 
 .reader-status a {
-    color: var(--ink-soft);
+    color: var(--muted);
     font-size: 0.92rem;
 }
 
@@ -50,7 +50,7 @@ main {
 }
 
 .comments > p {
-    color: var(--ink-soft);
+    color: var(--muted);
     margin-bottom: 18px;
 }
 
@@ -76,8 +76,8 @@ main {
 .comment-card .avatar { grid-area: avatar; }
 .comment-card .name { grid-area: name; font-weight: 600; }
 .comment-card .message { grid-area: message; font-family: var(--serif); font-size: 1.08rem; }
-.comment-card .likes { grid-area: likes; color: var(--ink-soft); font-size: 0.84rem; }
-.comment-card time { grid-area: time; color: var(--ink-soft); font-size: 0.84rem; }
+.comment-card .likes { grid-area: likes; color: var(--muted); font-size: 0.84rem; }
+.comment-card time { grid-area: time; color: var(--muted); font-size: 0.84rem; }
 
 .comment-form {
     display: grid;
@@ -88,7 +88,7 @@ main {
 
 .comment-form label {
     grid-column: 1 / -1;
-    color: var(--ink-soft);
+    color: var(--muted);
     font-size: 0.88rem;
 }
 
@@ -102,7 +102,7 @@ main {
 }
 
 .comment-box:focus {
-    border-color: var(--ink);
+    border-color: var(--charcoal);
 }
 
 footer {
@@ -117,7 +117,7 @@ footer {
 .page-num {
     grid-column: 1 / -1;
     text-align: center;
-    color: var(--ink-soft);
+    color: var(--muted);
     letter-spacing: 0.18em;
 }
 
