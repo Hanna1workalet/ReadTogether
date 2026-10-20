@@ -75,7 +75,7 @@ The entry file must be named `index.html`.
 ## Roadmap
 
 - [x] Home, book, reading and profile pages
-- [ ] Shared styles consistent across all pages
+- [x] Shared styles consistent across all pages
 - [ ] JavaScript: page navigation, progress, search, note form
 - [ ] Backend and accounts (for example Supabase or Firebase) so notes persist
 - [ ] Real book content split into pages (start with public-domain books)
